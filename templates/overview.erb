@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <!-- TODO: make this only appear if os[:family] is defined -->
+    <% if defined?(os) && defined?(os[:family]) %>
     <div class="col-md-4">
     <div class="panel panel-default">
       <div class="panel-heading">OS Description</div>
@@ -88,7 +88,7 @@
         </div>
       </div>
     </div>
-
+    <% end %>
     <script>
     function toggleRuleDisplay(cb) {
       var rules = 'span.label-'+cb.value;
